@@ -19,11 +19,13 @@ class Player {
 }
 class Enemy extends Player {
 }
-const gameIntro = chalk.yellow.bold.italic("\n\t\t\t Welcome to the Hamdan adventure game !! ");
+console.log("\n" + chalk.greenBright("-".repeat(70)));
+const gameIntro = chalk.yellow.bold.italic("\n\t Welcome to the Hamdan adventure game !! ");
 const gameNote = chalk.red.bold.italic(`\n\tRemember: `) +
-    chalk.green.bold.italic(`You have 3 MODES: EASY, MEDIUM, HARD.\n\tThere are different Enemy in each modes.\n\tIf you choose the hard level, the enemy will be Harder .\n`);
+    chalk.green.bold.italic(`You have 3 MODES: EASY, MEDIUM, HARD\n\tThere are different Enemy in each modes.\n\tIf you choose the hard level, the enemy will be Harder .`);
 console.log(gameIntro);
 console.log(gameNote);
+console.log("\n" + chalk.greenBright("-".repeat(70)));
 const gameLevels = [
     "Easy Mode:",
     "Medium Mode:",
@@ -142,7 +144,7 @@ async function playGame() {
         ]);
         if (wantContinue === "NO") {
             console.log(chalk.yellowBright.bold.italic(`\n\tI HOPE YOU ENJOYED THE GAME.\n`));
-            console.log(chalk.green.bold.italic(`\tGAME CREATOR : => `) +
+            console.log(chalk.green.bold.italic(`\tGame Creator : => `) +
                 chalk.yellow(`"Muhammad Hamdan Bhatti"`));
             continueProgram = false;
         }
