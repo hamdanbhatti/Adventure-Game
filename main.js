@@ -85,7 +85,11 @@ async function playGame() {
             while (continueMode) {
                 const number = Math.floor(Math.random() * 2);
                 if (number > 0) {
-                    player.decreaseHealth(opponentIndex === 0 ? 20 : opponentIndex === 1 ? 30 : 50);
+                    player.decreaseHealth(opponentIndex === 0
+                        ? 20
+                        : opponentIndex === 1
+                            ? 30
+                            : 50);
                     console.log(chalk.green.bold.italic(`\n\t${opponent.name} Health is: ${opponent.health}`));
                     console.log(chalk.red.bold.italic(`\t${player.name} Health is: ${player.health}\n`));
                     console.log(chalk.red.bold.italic(`\n\t${opponent.name} Hits you. Your health is draining. YOU NEED Energy Drink.\n`));
@@ -95,7 +99,11 @@ async function playGame() {
                     }
                 }
                 else {
-                    opponent.decreaseHealth(opponentIndex === 0 ? 50 : opponentIndex === 1 ? 30 : 30);
+                    opponent.decreaseHealth(opponentIndex === 0
+                        ? 50
+                        : opponentIndex === 1
+                            ? 30
+                            : 30);
                     console.log(chalk.green.bold.italic(`\n\t${player.name} Health is: ${player.health}`));
                     console.log(chalk.red.bold.italic(`\t${opponent.name} Health is: ${opponent.health}\n`));
                     if (opponent.health <= 0) {
